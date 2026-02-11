@@ -3,7 +3,7 @@ const collectAnswers = require("./lib/collectAnswers");
 const questions = [
   "What is your name?",
   "Where do you live?",
-  "What are you going to do with Nodejs?"
+  "What are you going to do with Nodejs?",
 ];
 
 const answerEvents = collectAnswers(questions, (answers) => {
@@ -12,4 +12,4 @@ const answerEvents = collectAnswers(questions, (answers) => {
   process.exit();
 });
 
-answerEvents.on("answer", answer => console.log(`The answer is ${answer}`));
+answerEvents.on("answer", (answer) => console.log(`The answer is ${answer}`));
